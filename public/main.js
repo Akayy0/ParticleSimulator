@@ -108,12 +108,14 @@ function decreasingFunction(distance, maxDistance) {
 
 const particles = [];
 
+const randomColor = () => Math.floor(Math.random() * 256);
+
 function createParticles() {
     for (let i = 0; i < 5000; i++) {
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
         const radius = 2;
-        const color = 'rgba(0, 0, 0, 1)';
+        const color = `rgba(${randomColor()}, ${randomColor()}, ${randomColor()}, 1)`;
 
         // Ajuste a intensidade da explosão conforme desejado
         const explosionIntensity = 50;
